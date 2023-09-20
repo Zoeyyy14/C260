@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Zoey Ma",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 115.56, "left": 170.32, "attrs": {} },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -93.12,
+      "left": -157.89,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "keypad1:R1", "esp:D19", "white", [ "v0" ] ],
+    [ "keypad1:R2", "esp:D18", "gray", [ "v0" ] ],
+    [ "keypad1:R3", "esp:D5", "orange", [ "v0" ] ],
+    [ "keypad1:R4", "esp:TX2", "gold", [ "v0" ] ],
+    [ "keypad1:C1", "esp:RX2", "yellow", [ "v0" ] ],
+    [ "keypad1:C2", "esp:D4", "gray", [ "v0" ] ],
+    [ "keypad1:C3", "esp:D2", "black", [ "v0" ] ],
+    [ "keypad1:C4", "esp:D15", "white", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
